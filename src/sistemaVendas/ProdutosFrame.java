@@ -1,3 +1,4 @@
+//FRAME LISTAGEM DE PRODUTOS
 package sistemaVendas;
 
 import javax.swing.*;
@@ -10,13 +11,15 @@ public class ProdutosFrame extends JFrame {
     private ArrayList<Produto> produtos;
     private JTable tabela;
     private ProdutoTableModel tableModel;
-
+    
+//construtor	 
     public ProdutosFrame() {
         setTitle("Produtos");
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
+ //criando um array e atribuindo a produtos
         produtos = new ArrayList<>();
 
         JPanel panel = new JPanel();
@@ -80,7 +83,7 @@ public class ProdutosFrame extends JFrame {
             }
         });
     }
-
+//metodo para btn pesquisar
     private void pesquisarProduto(String idStr) {
         try {
             int id = Integer.parseInt(idStr);
